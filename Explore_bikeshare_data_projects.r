@@ -37,12 +37,12 @@ ny.hr=ny$Start.hr
 wash.hr=wash$Start.hr
 chi.hr=chi$Start.hr 
 
-#the first function to return the frequent time
+#The first function to return the frequent time
 pop_Start_Timing = function (time){
     result = tail(names(sort(table(time))), 1)
     return(result)
 }
-#the second fuction to return all the counts of the different time for  trips
+# second fuction to return all the counts of the different time for  trips
 freq_timing = function(time){
     y= data.frame(table(time))
     y=y[which.max(y$Freq), ]
@@ -51,7 +51,7 @@ freq_timing = function(time){
     result=frequent
     return(result)
 }
-#Creating the aggregation variables of the combined data frame
+#Creating the aggregate variables of the combined data frame
 pop_time['Most Frequent months'] = c(pop_Start_Timing(ny.month),pop_Start_Timing(wash.month),pop_Start_Timing(chi.month))
 pop_time['Counts of the most frequent months'] = c(freq_timing(ny.month),freq_timing(wash.month),freq_timing(chi.month))
 pop_time['Most Frequent day of the week'] =  c(pop_Start_Timing(ny.day),pop_Start_Timing(wash.day),pop_Start_Timing(chi.day))
