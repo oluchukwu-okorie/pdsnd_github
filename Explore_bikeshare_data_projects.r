@@ -139,12 +139,12 @@ pop_stations
 
 #Inorder to create a grouped bar chart,the structure of the data has to change to long format  using tidyr
 require(tidyr)
-counts_long = gather(count_stations,frequency,counts, -cities)
-counts_long
+counts_longer = gather(count_stations,frequency,counts, -cities)
+counts_longer
 
 #Since the data contains categorical data and counts(discrete measures),bar charts are the best to represent the data
 library(ggplot2)
-ggplot(data = counts_long, aes(x = cities, y = counts, fill = frequency)) +
+ggplot(data = counts_longer, aes(x = cities, y = counts, fill = frequency)) +
 geom_col(position = position_dodge()) +
 ggtitle("Counts of the most frequent stations\nof three cities in US")+
 labs(y="Counts", x = "Cities")+
