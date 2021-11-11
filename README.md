@@ -1,5 +1,4 @@
-This is a project done on udacity on the use of github and git version control system
-
+Documentation branch
 ### Date created
 11th November,2021 16:06
 
@@ -7,12 +6,12 @@ This is a project done on udacity on the use of github and git version control s
 Bike sharing system 
 
 ### Description
-The analysis of the Bike sharing system of three cities
+The analysis of the Bike sharing system of three cities in US using R language
 
 ### Files used
 the files used were from the city bike sharing system website 
-# https://ride.citibikenyc.com/system-data
+ https://ride.citibikenyc.com/system-data
 
 ### Credits
 https://stackoverflow.com/questions/37704212/extract-month-and-year-from-date-in-r/37704385
-
+AAL@tiec.gov.eg
