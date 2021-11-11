@@ -1,4 +1,4 @@
->**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
+This is a project done on udacity on the use of github and git version control system
 
 ### Date created
 11th November,2021 16:06
@@ -14,5 +14,5 @@ the files used were from the city bike sharing system website
 # https://ride.citibikenyc.com/system-data
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+https://stackoverflow.com/questions/37704212/extract-month-and-year-from-date-in-r/37704385
 

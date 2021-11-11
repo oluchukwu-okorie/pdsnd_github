@@ -137,7 +137,7 @@ for(i in c('ny','wash','chi')){
 }
 pop_stations
 
-#inorder to create a grouped bar chart,the structure of the data has to change to long format  using tidyr
+#Inorder to create a grouped bar chart,the structure of the data has to change to long format  using tidyr
 require(tidyr)
 counts_long = gather(count_stations,frequency,counts, -cities)
 counts_long
@@ -172,12 +172,12 @@ Trip_averaging= function(trip){#the stations represent the constant variables de
     return(result)
 }
 
-#variables to store the different counts using the functions
+#Variables to store the different counts using the functions
 duration_trips['Total Duration on Trips in weeks'] = c(Trips_add(ny_trip),Trips_add(wash_trip),Trips_add(chi_trip) )
 duration_trips['Average of Trips in seconds'] = c(Trip_averaging(ny_trip),Trip_averaging(wash_trip),Trip_averaging(chi_trip))                 
 duration_trips
 
-##inorder to create a grouped bar chart,the structure of the data has to change to long format  using tidyr
+#Inorder to create a grouped bar chart,the structure of the data has to change to long format  using tidyr
 require(tidyr)
 duration_trips_long = gather(duration_trips,duration,time, -cities)
 duration_trips_long
