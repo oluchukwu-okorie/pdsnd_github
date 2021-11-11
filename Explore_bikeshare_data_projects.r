@@ -16,11 +16,11 @@ pop_time = data.frame(cities=c('Newyork','Washington','Chicago'))
 ny$Start.month =format(as.Date(ny$Start.Time), "%m")#https://stackoverflow.com/questions/37704212/extract-month-and-year-from-date-in-r/37704385
 wash$Start.month =format(as.Date(wash$Start.Time), "%m")
 chi$Start.month = format(as.Date(chi$Start.Time), "%m")
-#days
+#days variable assignments
 ny$Start.day=weekdays(as.Date(ny$Start.Time))
 wash$Start.day =weekdays(as.Date(wash$Start.Time))
 chi$Start.day=weekdays(as.Date(chi$Start.Time))
-#hours
+#the hours variables assignments 
 ny$Start.hr= format(as.POSIXct(ny$Start.Time), format = "%H")#https://www.geeksforgeeks.org/how-to-extract-time-from-datetime-in-r/
 wash$Start.hr= format(as.POSIXct(wash$Start.Time), format = "%H")
 chi$Start.hr= format(as.POSIXct(chi$Start.Time), format = "%H")
@@ -59,9 +59,10 @@ pop_time['Counts of the most frequent day of the week'] = c(freq_timing(ny.day),
 pop_time['Most Frequent hour of the day'] =  c(pop_Start_Timing(ny.hr),pop_Start_Timing(wash.hr),pop_Start_Timing(chi.hr))
 pop_time['Counts of the most frequent hour of the day'] = c(freq_timing(ny.hr),freq_timing(wash.hr),freq_timing(chi.hr))
 head(pop_time)
-
+#picking out the data that will be inserted to the counts_duration dataframe used for viz
 counts_duration=subset(pop_time, select=c("cities", "Counts of the most frequent months","Counts of the most frequent day of the week","Counts of the most frequent hour of the day"))
 
+#creating a dataframe in long format to align to the requirements of using ggplot2
 require(tidyr)
 counts_duration_long = gather(counts_duration,frequency,counts, -cities)
 counts_duration_long
