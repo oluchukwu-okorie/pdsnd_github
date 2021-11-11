@@ -187,7 +187,6 @@ library(ggplot2)#http://www.sthda.com/english/wiki/ggplot2-barplots-quick-start-
 ggplot(data = duration_trips_long, aes(x = cities, y = time, fill = duration)) +
 geom_col(position = position_dodge()) +
 ggtitle("Duration in minutes of total trip duration\nof three cities in US")+
-labs(y="Duration(mins)", x = "Cities")+
+labs(y="Duration in mins", x = "Cities")+
 labs(fill = "Duration")
 
-system('python -m nbconvert Explore_bikeshare_data.ipynb')
