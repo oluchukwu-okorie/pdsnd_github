@@ -151,7 +151,7 @@ ggtitle("Counts of the most frequent stations\nof three cities in US")+
 labs(y="Counts", x = "Cities")+
 labs(fill = "Frequencies")
 
-#creating a dataframe to combine all the counts across the three cities
+#Creating the combined data frame
 duration_trips <- data.frame(cities=c('Newyork','Washington','Chicago'))
 
 #Creating constants for each variable for the start or end stations of each city
