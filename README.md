@@ -10,7 +10,8 @@ Bike sharing system
 The analysis of the Bike sharing system of three cities
 
 ### Files used
-Include the files used
+the files used were from the city bike sharing system website 
+# https://ride.citibikenyc.com/system-data
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
